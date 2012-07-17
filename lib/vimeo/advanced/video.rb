@@ -66,6 +66,11 @@ module Vimeo
                         :required => [:user_id],
                         :optional => [:page, :per_page, :full_response, :sort]
 
+      create_api_method :get_likers,
+                        "vimeo.videos.getLikers",
+                        :required => [:video_id],
+                        :optional => [:page, :per_page]
+
       create_api_method :get_subscriptions,
                         "vimeo.videos.getSubscriptions",
                         :required => [:user_id],
